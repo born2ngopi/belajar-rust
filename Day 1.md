@@ -182,3 +182,48 @@ Kita juga dapat menentukan panjang atau kapasitas dari array
 let a: [u8, 5] = [1,2,3,4,5];
 ```
 
+
+
+## Function
+
+Fungsi adalah sub-program yang bisa digunakan kembali baik di dalam program itu sendiri, maupun di program yang lain. keyword untuk mendeklarasikan fungsi di rust adalah `fn` contoh
+
+``` rust
+fn main() {
+    print_hallo();
+}
+
+fn print_hallo() {
+    println!{"hallo"};
+}
+```
+
+Pada contoh code diatas, fungsi main merupakan fungsi yang pertama kali akan dijalankan saat program pertama kali dijalankan. di rust bila kita membuat fungsi atau variabel yang menggunakan lebih dari 2 kata itu menggunakan snake case (ex : `print_hallo`) dan tidak menggunakan camel case (ex : `printHallo`). Kita juga dapat mengirim suatu nilai kedalam fungsi, contoh
+
+``` rust
+fn main() {
+    let age: i32 = 21;
+    
+    print_age(age);
+}
+
+fn print_age(age: i32) {
+    println!{"my age is {}", age};
+}
+```
+
+fungsi juga dapat mengembalikan nilai, contoh :
+
+``` rust
+fn main() {
+    let number = get_number();
+    
+    println!{"number is {}", number};
+}
+
+fn get_number() -> i32 {
+    return 6 
+    // atau bisa juga ditulis 6 tanpa keyword `return`
+}
+```
+
