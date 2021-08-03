@@ -1,11 +1,11 @@
 # TODO List learn rust
 
-## day 1
+## [day 1](https://github.com/born2ngopi/belajar-rust/blob/master/Day%201.md#day-1)
 
-* Intro
-* variabel and mutabillity
-* data type
-* function
+* [Intro](https://github.com/born2ngopi/belajar-rust/blob/master/Day%201.md#introduction)
+* [variabel and mutabillity](https://github.com/born2ngopi/belajar-rust/blob/master/Day%201.md#variabel-dan-mutabillity)
+* [data type](https://github.com/born2ngopi/belajar-rust/blob/master/Day%201.md#data-types)
+* [function](https://github.com/born2ngopi/belajar-rust/blob/master/Day%201.md#function)
 * control flow
 
 ## day 2
