@@ -70,3 +70,115 @@ error[E0308]: mismatched types
   |            ^^^^^^^^^^ expected `&str`, found `usize`
 ```
 
+## Data types
+
+### Scalar types
+
+Rust memiliki 4 jenis tipe scalar: integer, float, boolean, dan character
+
+#### Integer
+
+Seperti bahasa pemrograman lainnya integer adalah tipe data bilangan bulat
+
+| Length  | Signed  | Unsigned |
+| ------- | ------- | -------- |
+| 8-bit   | `i8`    | `u8`     |
+| 16-bit  | `i16`   | `u16`    |
+| 32-bit  | `i32`   | `u32`    |
+| 64-bit  | `i64`   | `u64`    |
+| 128-bit | `i128`  | `u128`   |
+| arch    | `isize` | `usize`  |
+
+contoh
+
+``` rust
+let a: i8 = 10;
+```
+
+#### Float
+
+Float adalah tipe data bilangan decimal. Di rust float ada dua, yaitu 32bit `f32` dan 64bit `f64`. Secara default bila kita tidak menentukan tipe data bilangan decimal pada saat membuat variabel rust akan secara otomatis menerjemahkannya ke 64bit, contoh
+
+``` rust
+let a = 6.7; // 64 bit
+let b: f32 = 6.7 // 32 bit
+```
+
+##### Numeric operation
+
+Seperti bahasa pemrograman lain, di rust juga terdapat beberapa operasi bilangan seperti penjumlahan, pengurangan, pembagian, perkalian, dan modulo
+
+``` rust
+	// penambahan
+	let sum = 5 + 10;
+
+    // pengurangan
+    let difference = 95.5 - 4.3;
+
+    // perkalian
+    let product = 4 * 30;
+
+    // pembagian
+    let quotient = 56.7 / 32.2;
+
+    // modulo
+    let remainder = 43 % 5;
+```
+
+
+
+#### Boolean
+
+Type data ini hanya terdiri dari 2 value, yaitu `true` dan `false`. Contoh :
+
+``` rust
+let a = true;
+
+let b: bool = false;
+```
+
+
+
+#### Character
+
+**Tipe data character** merupakan salah satu **tipe data** yang memungkinkan kita untuk memesan memori berformat text (huruf, angka, dan simbol) dengan karakter tunggal. Contoh
+
+``` rust
+let rune = 'C';
+let emoji = '😻';
+```
+
+### Compound type
+
+Compound type dapat mengelompokan banyak nilai kedalam satu type. Di rust memiliki 2 jenis compound type yaitu tuples dan array.
+
+#### Tuples
+
+tuple adalah cara umum untuk mengelompokan beberapa nilai dengan berbagai type. contoh
+
+``` rust
+let tup: (i8, f32) = (10, 3.8);
+```
+
+kita bisa mengakses spesifik nilainya dengan menggunakan index posisinya, contoh
+
+``` rust
+let ten = x.0; // ten == 10
+
+let double = x.1; // double == 3.8
+```
+
+#### Array
+
+**Array** merupakan tipe data terstruktur **dalam pemrograman**, **array** memungkinkan untuk menyimpan data maupun referensi objek **dalam** jumlah banyak dan terindeks. Berbeda dengan tuples yang dapat menyimpan banyak nilai dengan tipe data berbeda, array dapat menyimpan banyak nilai **tetapi** dengan tipe data yang sama. Contoh
+
+``` rust
+let a = [1,2,3,4,5];
+```
+
+Kita juga dapat menentukan panjang atau kapasitas dari array
+
+``` rust
+let a: [u8, 5] = [1,2,3,4,5];
+```
+
